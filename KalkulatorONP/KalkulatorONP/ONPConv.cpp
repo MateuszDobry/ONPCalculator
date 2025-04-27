@@ -4,19 +4,19 @@
 
 void ONPConv::addChar(char* znak) {
     char element[20];
-    // Jeúli token jest operandem
+    // Je≈ìli token jest operandem
     if (is_number(znak[0])) {
         output.enqueue(znak);
     }
     else if (is_function(znak[0])) {
         stos.push(znak);  
     }
-    // Jeúli token to nawias otwierajπcy '('
+    // Je≈ìli token to nawias otwieraj¬πcy '('
     else if (znak[0] == '(') { 
         argCounter.push(1);
         stos.push(znak);
     }
-    // Jeúli token to nawias zamykajπcy ')'
+    // Je≈ìli token to nawias zamykaj¬πcy ')'
     else if (znak[0] == ')') {
         while (!stos.isEmpty() && stos.peek()[0] != '(') {
             output.enqueue(stos.pop(element));
@@ -40,7 +40,7 @@ void ONPConv::addChar(char* znak) {
         }
 
     }
-    // Jeúli token jest operatorem
+    // Je≈ìli token jest operatorem
     else {
         while (!stos.isEmpty() && get_priority(znak) <= get_priority(stos.peek()) && stos.peek()[0] != '(') {
             output.enqueue(stos.pop(element));
@@ -65,7 +65,6 @@ void ONPConv::endParse()
 void ONPConv::print()
 {
     output.print();
-    //std::cout << std::endl << "Stack:" << std::endl;
     stos.print();
 }
 
