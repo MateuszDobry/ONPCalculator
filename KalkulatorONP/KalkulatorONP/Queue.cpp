@@ -5,7 +5,7 @@ Queue::Queue() : front(nullptr), rear(nullptr) {}
 
 Queue::~Queue() {
 	while (!isEmpty()) {
-		Node* temp = front; // Tymczasowy wskaŸnik do pierwszego wêz³a
+		Node* temp = front; // Tymczasowy wskaznik do pierwszego wezla
 		front = front->next; 
 		delete temp;
 	}
@@ -54,10 +54,7 @@ char* Queue::peek() {
 
 void Queue::print()
 {
-	//if (isEmpty()) {
-	//	std::cerr << "Queue is empty.\n";
-	//	exit(EXIT_FAILURE);
-	//}
+	
 	Node* currentNode = front;
 	while (currentNode != nullptr) {
 		std::cout << currentNode->data << " ";
@@ -71,19 +68,19 @@ Queue& Queue::operator=(const Queue* other) {
 		return *this;
 	}
 
-	// Najpierw usuwamy zawartoœæ bie¿¹cej kolejki
+	// Najpierw usuwamy zawartosc biezacej kolejki
 	while (!isEmpty()) {
 		dequeue(znak);
 	}
 
-	// Teraz kopiujemy zawartoœæ z "other" do tej kolejki, zauwa¿ u¿ycie wskaŸnika
-	Node* current = other->front; // zaczynamy od pocz¹tku "other"
+	
+	Node* current = other->front; 
 
-	while (current != nullptr) { // iteracja przez kolejne elementy
-		this->enqueue(current->data); // dodajemy elementy do bie¿¹cej kolejki
-		current = current->next; // przechodzimy do nastêpnego wêz³a
+	while (current != nullptr) { 
+		this->enqueue(current->data); 
+		current = current->next; 
 	}
 
-	return *this; // zwracamy referencjê do bie¿¹cej instancji
+	return *this; // zwracanie referencji do biezacej instancji
 }
 
