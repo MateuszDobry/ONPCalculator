@@ -1,9 +1,5 @@
 #include "ONPCounter.h"
 
-
-
-
-
 void ONPCounter::fillQueue(Queue* Kolejka)
 {
     this->kolejka = Kolejka;
@@ -41,7 +37,7 @@ int ONPCounter::count()
                     std::cout << "ERROR";
                     std::cout << '\n';
                     flag = false;
-                    return 1; // cokolwiek;
+                    return 1; 
                 }
                 else {
                     stos.push(b / a);
