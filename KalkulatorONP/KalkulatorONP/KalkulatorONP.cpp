@@ -47,26 +47,6 @@ int main()
         
     }
 
- 
-
-    
-    //ONPConv proba;
-    //char znak[20];
-    //while (cin >> znak && (znak[0] != '.')) {
-    //    proba.addChar(znak);
-    //}
-    //char wyjscie[20];
-
-    //proba.print();
-    //cout << endl;
-    //// Jak chcesz wypisać ostatni znak czyli dequeue to musisz skopiowac pamiec i wtedy to wypisac
-    //std::strcpy(wyjscie, (*proba.getOutput()).dequeue());
-    //cout << wyjscie;
-    //cout << endl;
-    //proba.print();
-
-   
-
     return 0;
 }
 
