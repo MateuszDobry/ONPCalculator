@@ -49,10 +49,6 @@ char* Stack::peek() {
 
 void Stack::print()
 {
-    /*if (isEmpty()) {
-        std::cerr << "Stack is empty.\n";
-        exit(EXIT_FAILURE);
-    }*/
     Node* currentNode = top;
     while (currentNode != nullptr) {
         printf("%s ", currentNode->data);
